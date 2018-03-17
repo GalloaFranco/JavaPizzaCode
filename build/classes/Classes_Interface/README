@@ -1,0 +1,47 @@
+---------JAVA PIZZA CODE---------
+
+Programa realizado bajo el marco de un trabajo final en el curso JAVA INICIAL, ACADEMIA CISCO, 
+de la UNIVERSIDAD TECNOLÓGICA NACIONAL.
+
+PROFESOR : JORGE HARACH.
+ALUMNO : FRANCO ANTONIO GALLO.
+
+El presente programa sigue las siguiente indicaciones:
+
+
+
+Se le solicita desarrollar una aplicación para una empresa de comidas rápidas, de acuerdo a las
+siguientes consideraciones:
+El local vende tres tipos de comidas:
+
+ Pollo rotizado:
+o El producto se identifica con el Código 100,Tiene un costo de $130
+ Pizzas:
+o Simple: Código 101, costo $95
+o Italiana: Código 102, costo $110
+o Rúcula: Código 103, costo $135
+ Lomos:
+o Código 104, Costo: $190
+Adicionalmente, el pollo y los lomos son "acompañables" con dos tipos de "acompañamientos":
+ Papas fritas: Costo adicional: $45
+ Papas rejilla: Costo adicional: $37
+Estos acompañamientos NO se pueden vender como productos separados, solo como parte de la
+venta de un pollo o lomo.
+Finalmente, se cuenta con dos políticas de descuento:
+1. Si se compran 2 pollos con adicionales, se descuenta el 30% de uno de ellos
+2. 4x3 en lomos (con o sin adicionales)
+Requerimientos obligatorios
+Se solicita una aplicación que:
+ Permita iniciar un nuevo pedido
+ Brinde, por pantalla, un menú de los productos que pueden comprarse (si se elije pollo o
+lomo, debe ofrecer los opcionales)
+ Aplique las políticas de descuento al pedido, cuando el comprador no quiera agregar más
+productos.
+ Sea capaz de imprimir el detalle completo del resumen, discriminando el monto de
+descuentos, si los hubiera.
+Consideraciones
+ No importa que el ticket muestre ítems no agrupados (puede tener un ítem que sea 1
+Lomo y abajo otro que sea 1 Lomo, no hace falta que diga "2 lomos")
+ Las funcionalidades que desee agregar, serán aceptadas
+ Se valorará, especialmente, la manera en la que diseñe sus clases (utilizando herencia y los
+distintos conceptos estudiados) 
