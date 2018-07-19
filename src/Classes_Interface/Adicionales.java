@@ -11,7 +11,7 @@ package Classes_Interface;
  */
 public interface  Adicionales {
     
-    public String descripcion();
+    public String description();
     
     public double getPrice();
 }

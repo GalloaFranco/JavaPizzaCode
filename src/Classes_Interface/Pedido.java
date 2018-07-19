@@ -123,7 +123,7 @@ public class Pedido implements Politicas_descuento {//CAMPOS DE LA CLASE PEDIDO
         Fritas f = new Fritas();
         this.total += f.getPrice();
         counterAdicionales ++;
-        resumen.add("\n-Adicional de: "+ f.descripcion() +" $45");
+        resumen.add("\n-Adicional de: "+ f.description() +" $45");
         return total;
     }
 /*    
@@ -133,7 +133,7 @@ public class Pedido implements Politicas_descuento {//CAMPOS DE LA CLASE PEDIDO
         Rejilla re = new Rejilla();
         this.total += re.getPrice();
         counterAdicionales ++;
-        resumen.add("\n-Adicional de:"+ re.descripcion() +" $37");
+        resumen.add("\n-Adicional de:"+ re.description() +" $37");
         return total;
     }
 /*    

@@ -19,7 +19,7 @@ public  class Fritas implements Adicionales {
     }
 
     @Override
-    public String descripcion() {
+    public String description() {
         return "Frita";
     }
     

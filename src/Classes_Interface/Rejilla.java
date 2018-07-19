@@ -20,7 +20,7 @@ public  class Rejilla implements Adicionales {
     }
 
     @Override
-    public String descripcion() {
+    public String description() {
         return "Regilla";
     }
     
