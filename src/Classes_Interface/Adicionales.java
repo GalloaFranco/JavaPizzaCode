@@ -9,13 +9,9 @@ package Classes_Interface;
  *
  * @author Franco Gallo
  */
-public abstract class Adicionales {
+public interface  Adicionales {
     
-      
-    private double price;
-
-    public double getPrice() {
-        return price;
-    }
+    public String descripcion();
     
+    public double getPrice();
 }

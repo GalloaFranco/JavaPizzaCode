@@ -9,16 +9,18 @@ package Classes_Interface;
  *
  * @author Franco Gallo
  */
-public  class Fritas extends Adicionales {
+public  class Fritas implements Adicionales {
 
     private double price = 45;
 
-    
     @Override
     public double getPrice() {
         return price;
     }
-    
-    
+
+    @Override
+    public String descripcion() {
+        return "Frita";
+    }
     
 }

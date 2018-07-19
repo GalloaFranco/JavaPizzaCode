@@ -9,7 +9,7 @@ package Classes_Interface;
  *
  * @author usuario
  */
-public  class Rejilla extends Adicionales {
+public  class Rejilla implements Adicionales {
     
     private double price = 37;
 
@@ -17,6 +17,11 @@ public  class Rejilla extends Adicionales {
     @Override
     public double getPrice() {
         return price;
+    }
+
+    @Override
+    public String descripcion() {
+        return "Regilla";
     }
     
     
