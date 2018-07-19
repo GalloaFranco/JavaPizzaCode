@@ -9,7 +9,7 @@ package Classes_Interface;
  *
  * @author Franco Gallo
  */
-public class Lomo extends Comida {
+public class Lomo extends Comida implements Politicas_descuento {
 
 
     public Lomo(double price, int id, String medida, String description) {
@@ -61,6 +61,19 @@ public class Lomo extends Comida {
     public void agregarAdicional(Fritas f){
       f.getPrice();
       
+    }
+
+    /*
+     ***************************************************************************
+     */
+    @Override
+    public double getDescuento(Pedido pedido) {
+        //realiza el calculo para el descuento del lomo en promocion actual
+        Lomo lomo = new Lomo(190, 104, "Unidad", "Lomaso de ternera con mayonesa casera y huevo frito");
+        pedido.total = pedido.total - lomo.getPrice(); //l2 variable auxiliar para realizar el descuento.
+        pedido.counterDescuentoLomo++;
+        pedido.auxiliarDescuentoLomo = lomo.getPrice();
+        return pedido.total;
     }
 
  

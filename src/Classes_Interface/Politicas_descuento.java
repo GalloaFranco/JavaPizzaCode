@@ -9,8 +9,6 @@ package Classes_Interface;
  */
 public interface Politicas_descuento {
     
-    public double getDescuentoPollo();
-    
-    public double getDescuentoLomo();
+    public double getDescuento(Pedido pedido);
     
 }
