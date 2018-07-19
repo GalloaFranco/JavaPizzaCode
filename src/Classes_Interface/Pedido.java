@@ -101,7 +101,7 @@ public class Pedido implements Politicas_descuento {//CAMPOS DE LA CLASE PEDIDO
         resumen.add("\nFecha :"+ d);
         resumen.add("\nN°Pedido: "+getNumero_pedido());
         resumen.add("\nMONTO TOTAL: "+total);
-        return resumen;
+        return new ArrayList<>(resumen);
     }
 /*    
 *************************************************************************** 
