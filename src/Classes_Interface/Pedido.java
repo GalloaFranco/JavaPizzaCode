@@ -53,28 +53,36 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
 /*    
 *************************************************************************** 
 */  
-    public ArrayList getResumen(){//DEVUELVE EL ARRAYLIST RESUMEN
-            if(counterLomo >= 1 ){
-                resumen.add("\n-Lomo $190"+" ||Cantidad pedida: "+ counterLomo);
-            }
-            if(counterPollo >= 1){
-                resumen.add("\n-Pollo $130"+" ||Cantidad pedida: "+ counterPollo);  
-            }
-            if(counterPizzaItaliana>= 1){
-                resumen.add("\n-Pizza Italiana $110"+" ||Cantidad pedida: "+ counterPizzaItaliana);
-            }
-            if(counterPizzaRucula>= 1){
-                resumen.add("\n-Pizza Rucula $135"+" ||Cantidad pedida: "+ counterPizzaRucula);
-            }
-            if(counterPizzaSimple>= 1){
-                resumen.add("\n-Pizza Simple $95"+" ||Cantidad pedida: "+ counterPizzaSimple);
-            }
-            if (counterDescuentoPollo >= 1 ){
-                resumen.add("\n*Descuento pollo 30% descuento= -$"+auxiliarDescuentoPollo);
-            }
-            if (counterDescuentoLomo >= 1){
-                resumen.add("\n*Descuento promo 4x3 en lomos= -$"+auxiliarDescuentoLomo);
-            }
+    public void validateResumen(){//REALIZA LAS VALIDACIONES CORRESPONDIENTES PARA INSERTAR TEXTO EN EL RESUMEN
+            
+        if (counterLomo >= 1) {
+            resumen.add("\n-Lomo $190" + " ||Cantidad pedida: " + counterLomo);
+        }
+        if (counterPollo >= 1) {
+            resumen.add("\n-Pollo $130" + " ||Cantidad pedida: " + counterPollo);
+        }
+        if (counterPizzaItaliana >= 1) {
+            resumen.add("\n-Pizza Italiana $110" + " ||Cantidad pedida: " + counterPizzaItaliana);
+        }
+        if (counterPizzaRucula >= 1) {
+            resumen.add("\n-Pizza Rucula $135" + " ||Cantidad pedida: " + counterPizzaRucula);
+        }
+        if (counterPizzaSimple >= 1) {
+            resumen.add("\n-Pizza Simple $95" + " ||Cantidad pedida: " + counterPizzaSimple);
+        }
+        if (counterDescuentoPollo >= 1) {
+            resumen.add("\n*Descuento pollo 30% descuento= -$" + auxiliarDescuentoPollo);
+        }
+        if (counterDescuentoLomo >= 1) {
+            resumen.add("\n*Descuento promo 4x3 en lomos= -$" + auxiliarDescuentoLomo);
+        }
+    }
+/*
+***************************************************************************    
+*/
+    public ArrayList getResumen(){//DEVUELVE UN ARRAYLIST RESUMEN
+        
+        validateResumen();
         resumen.add("\nFecha :"+ d);
         resumen.add("\nN°Pedido: "+getNumero_pedido());
         resumen.add("\nMONTO TOTAL: "+total);
