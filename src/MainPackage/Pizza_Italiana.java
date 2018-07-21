@@ -3,24 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Classes_Interface;
+package MainPackage;
 
 /**
  *
- * @author Franco Gallo
+ * @author usuario
  */
-public class Pizza_Rucula extends Pizza{
+public class Pizza_Italiana extends Pizza {
 
 
-    public Pizza_Rucula(double price, int id,String medida, String description) {
-        super(price, id,medida, description);
+    public Pizza_Italiana(double price, int id,String medida, String description) {
+        super(price, id, medida, description);
     }
 
     @Override
     public String getMedida() {
         return super.getMedida(); 
     }
-    
 
     @Override
     public double getPrice() {
@@ -29,18 +28,17 @@ public class Pizza_Rucula extends Pizza{
 
     @Override
     public int getId() {
-        return super.getId();
+        return super.getId(); 
     }
 
     @Override
     public String getDescription() {
-        return super.getDescription();
+        return super.getDescription(); 
     }
 
     @Override
     public void setDescription(String description) {
         super.setDescription(description); 
     }
-   
     
 }

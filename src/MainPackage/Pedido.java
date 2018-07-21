@@ -1,7 +1,7 @@
 /*
  * CLASE PEDIDO, ES EL NEXO ENTRE LA CLASE MAIN Y LAS DEMAS.
  */
-package Classes_Interface;
+package MainPackage;
 
 import java.util.ArrayList;
 import java.util.Date;

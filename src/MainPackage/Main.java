@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Classes_Interface;
+package MainPackage;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

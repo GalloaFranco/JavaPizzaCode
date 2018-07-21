@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Classes_Interface;
+package MainPackage;
 
-import Classes_Interface.Politicas_descuento;
+import MainPackage.Politicas_descuento;
 
 /**
  *
