@@ -7,7 +7,6 @@ package MainPackage;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 /**
  *
  * @author Franco Gallo
@@ -19,7 +18,6 @@ public class Main {
     public static void main(String[] args) {
         
        System.out.println("----------'JAVA PIZZA CODE'----------");
-       
        Pedido r = new Pedido(1);
        Scanner sc = new Scanner(System.in); 
        boolean salirOp1 = false;

@@ -89,7 +89,7 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
         return new ArrayList<>(resumen);
     }
 /*    
-*************************************************************************** 
+***************************************************************************
 */    
     public double getLomo(){//GENERA  EL ITEM LOMO
         Lomo lomo = new Lomo(190, 104,"Unidad","Lomaso de ternera con mayonesa casera y huevo frito.");
