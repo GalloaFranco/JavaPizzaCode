@@ -13,7 +13,7 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
     private int numero_pedido;
     double total;
     private ArrayList <String> resumen;
-    private Date d;
+    private Date fecha;
     private int counterPollo;
     private int counterLomo;
     private int counterAdicionales;
@@ -30,7 +30,7 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
     public Pedido(int numero_pedido) {//CONSTRUCTOR
         this.numero_pedido = numero_pedido;
         this.resumen = new ArrayList<>();
-        d = new Date();
+        fecha = new Date();
     }
 /*    
 *************************************************************************** 
@@ -83,7 +83,7 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
     public ArrayList getResumen(){//DEVUELVE UN ARRAYLIST RESUMEN
         
         validateResumen();
-        resumen.add("\nFecha :"+ d);
+        resumen.add("\nFecha :"+ fecha);
         resumen.add("\nN°Pedido: "+getNumero_pedido());
         resumen.add("\nMONTO TOTAL: "+total);
         return new ArrayList<>(resumen);
@@ -164,4 +164,11 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
         //resumen.add("\n-Pizza Simple $95");
         return total;
     }
+/*
+***************************************************************************    
+*/
+    public Date getFecha() {//DEVUELVE LA FECHA DEL PEDIDO
+        return fecha;
+    }
+    
 }
