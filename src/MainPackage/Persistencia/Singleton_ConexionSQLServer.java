@@ -6,6 +6,8 @@
 package MainPackage.Persistencia;
 
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -18,7 +20,11 @@ public class Singleton_ConexionSQLServer {
     
     //CONSTRUCTOR PRIVADO
     private Singleton_ConexionSQLServer(){
-    
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Singleton_ConexionSQLServer.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     /*
     ****************************************************************************

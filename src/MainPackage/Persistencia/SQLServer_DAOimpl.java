@@ -19,8 +19,9 @@ public class SQLServer_DAOimpl implements PedidoDAO {
            PreparedStatement stmt = con.prepareStatement(QuerySelector.getINSERT_PEDIDOS())){
             
             stmt.setInt(1, pedido.getNumero_pedido());
-            stmt.setDate(2, (Date) pedido.getFecha());
+            stmt.setDate(2, new java.sql.Date(pedido.getFecha().getTime()));
             
+            stmt.executeUpdate();
             
         }catch(SQLException exception){
             exception.getMessage();

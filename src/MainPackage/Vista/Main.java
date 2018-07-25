@@ -6,6 +6,7 @@
 package MainPackage.Vista;
 
 import MainPackage.Logica.Pedido;
+import MainPackage.Persistencia.SQLServer_DAOimpl;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 /**
@@ -37,13 +38,17 @@ public class Main {
        
                 switch(opcion1){
                 
-                 case 1: 
+                    case 1: 
                     do{
                         System.out.println("Ingrese el numero de pedido :");
                         int numPedido = sc.nextInt();
                         Pedido s = new Pedido(numPedido);
                         r = s ; 
-                            
+
+                        //------------ZONA DE TESTING PERSISTENCIA--------------
+                        SQLServer_DAOimpl dao = new SQLServer_DAOimpl();
+                        dao.addPedido(s);
+                        //------------------------------------------------------
                             do{
                                 try{
                         
