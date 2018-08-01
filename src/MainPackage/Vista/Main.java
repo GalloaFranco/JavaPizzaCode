@@ -22,6 +22,7 @@ public class Main {
        System.out.println("----------'JAVA PIZZA CODE'----------");
        Pedido r = new Pedido(1);
        Scanner sc = new Scanner(System.in); 
+/*----*/SQLServer_DAOimpl dao = new SQLServer_DAOimpl();/*--------------------*/
        boolean salirOp1 = false;
        
         do{
@@ -45,10 +46,6 @@ public class Main {
                         Pedido s = new Pedido(numPedido);
                         r = s ; 
 
-                        //------------ZONA DE TESTING PERSISTENCIA--------------
-                        SQLServer_DAOimpl dao = new SQLServer_DAOimpl();
-                        dao.addPedido(s);
-                        //------------------------------------------------------
                             do{
                                 try{
                         
@@ -172,6 +169,7 @@ public class Main {
                 
                  case 3 :
                      salirOp1 = true;
+/*-----------------*/dao.addPedido(r);/*--------------------------------------*/
                      System.out.println("Muchas gracias por utilizar Java Pizza Code, hasta luego!!!");
                 break;
                 
