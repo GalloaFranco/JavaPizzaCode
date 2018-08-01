@@ -13,6 +13,7 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
     private int numero_pedido;
     double total;
     private ArrayList <String> resumen;
+    private ArrayList <Comida> arrayComida;
     private Date fecha;
     private int counterPollo;
     private int counterLomo;
@@ -30,6 +31,7 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
     public Pedido(int numero_pedido) {//CONSTRUCTOR
         this.numero_pedido = numero_pedido;
         this.resumen = new ArrayList<>();
+        this.arrayComida = new ArrayList<>();
         fecha = new Date();
     }
 /*    
@@ -57,18 +59,23 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
             
         if (counterLomo >= 1) {
             resumen.add("\n-Lomo $190" + " ||Cantidad pedida: " + counterLomo);
+            arrayComida.add(getLomo());
         }
         if (counterPollo >= 1) {
             resumen.add("\n-Pollo $130" + " ||Cantidad pedida: " + counterPollo);
+            arrayComida.add(getPollo());
         }
         if (counterPizzaItaliana >= 1) {
             resumen.add("\n-Pizza Italiana $110" + " ||Cantidad pedida: " + counterPizzaItaliana);
+            arrayComida.add(getPizzaItaliana());
         }
         if (counterPizzaRucula >= 1) {
             resumen.add("\n-Pizza Rucula $135" + " ||Cantidad pedida: " + counterPizzaRucula);
+            arrayComida.add(getPizzaRucula());
         }
         if (counterPizzaSimple >= 1) {
             resumen.add("\n-Pizza Simple $95" + " ||Cantidad pedida: " + counterPizzaSimple);
+            arrayComida.add(getPizzaSimple());
         }
         if (counterDescuentoPollo >= 1) {
             resumen.add("\n*Descuento pollo 30% descuento= -$" + auxiliarDescuentoPollo);
@@ -88,18 +95,24 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
         resumen.add("\nMONTO TOTAL: "+total);
         return new ArrayList<>(resumen);
     }
+/*
+***************************************************************************    
+*/
+    public ArrayList <Comida> getComidas(){
+        
+        return new ArrayList<>(arrayComida);
+    }
 /*    
 ***************************************************************************
 */    
-    public double getLomo(){//GENERA  EL ITEM LOMO
+    public Lomo getLomo(){//GENERA  EL ITEM LOMO
         Lomo lomo = new Lomo(190, 104,"Unidad","Lomaso de ternera con mayonesa casera y huevo frito.");
         this.total += lomo.getPrice();
         counterLomo ++;
-        //resumen.add("\n-Lomo $190");
         if (counterLomo == 4){
             lomo.getDescuento(this);
         }
-        return total;
+        return lomo;
     }
 /*    
 *************************************************************************** 
@@ -124,45 +137,41 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
 /*    
 *************************************************************************** 
 */    
-    public double getPollo(){ //GENERA EL ITEM POLLO
+    public Pollo_Rostizado getPollo(){ //GENERA EL ITEM POLLO
         Pollo_Rostizado pollo = new Pollo_Rostizado(130, 100,"Unidad","Pollo de calidad, bien doradito con tomillo, mostaza y manteca derretida");
         this.total += pollo.getPrice();
         counterPollo ++;
-        //resumen.add("\n-Pollo $130");
         if ((counterPollo == 2) && (counterAdicionales == 2)){
             pollo.getDescuento(this);
         }
-        return total;
+        return pollo;
     }
 /*    
 *************************************************************************** 
 */    
-    public double getPizzaItaliana(){ //GENERA EL ITEM PIZZA ITALIANA
+    public Pizza_Italiana getPizzaItaliana(){ //GENERA EL ITEM PIZZA ITALIANA
         Pizza_Italiana pi = new Pizza_Italiana(110, 102,"Porciones", "Pizza a la italiana, casera con queso rallado, anchoas y salame.");
         this.total += pi.getPrice();
         counterPizzaItaliana++;
-        //resumen.add("\n-Pizza Italiana $110");
-        return total;
+        return pi;
     }
 /*    
 *************************************************************************** 
 */    
-    public double getPizzaRucula(){ //GENERA EL ITEM PIZZA RUCULA
+    public Pizza_Rucula getPizzaRucula(){ //GENERA EL ITEM PIZZA RUCULA
         Pizza_Rucula pr = new Pizza_Rucula(135, 103, "Porciones", "Pizza con rucula, casera queso, tomate y pimiento");
         this.total += pr.getPrice();
         counterPizzaRucula++;
-        //resumen.add("\n-Pizza Rúcula $135");
-        return total;
+        return pr;
     }
 /*    
 *************************************************************************** 
 */       
-    public double getPizzaSimple(){ //GENERA EL ITEM PIZZA SIMPLE
+    public Pizza_Simple getPizzaSimple(){ //GENERA EL ITEM PIZZA SIMPLE
         Pizza_Simple ps = new Pizza_Simple(95, 101,"Porciones","Pizza simple, casera con queso muzarella y tomate");
         this.total += ps.getPrice();
         counterPizzaSimple++;
-        //resumen.add("\n-Pizza Simple $95");
-        return total;
+        return ps;
     }
 /*
 ***************************************************************************    
