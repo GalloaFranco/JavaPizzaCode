@@ -6,6 +6,7 @@
 package MainPackage.Persistencia;
 
 import MainPackage.Logica.Pedido;
+import java.sql.SQLException;
 
 /**
  *
@@ -13,7 +14,7 @@ import MainPackage.Logica.Pedido;
  */
 public interface PedidoDAO {
     
-    public void addPedido(Pedido pedido);//METODO PARA INSERTAR UN PEDIDO EN LA BASE DE DATOS
+    public void addPedido(Pedido pedido)throws SQLException;//METODO PARA INSERTAR UN PEDIDO EN LA BASE DE DATOS
     
     public StringBuilder mostrarTodo();//METODO QUE DEVUELVE TODOS LOS PEDIDOS ALMACENADOS
     

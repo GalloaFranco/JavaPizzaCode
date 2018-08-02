@@ -88,7 +88,6 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
 ***************************************************************************    
 */
     public ArrayList getResumen(){//DEVUELVE UN ARRAYLIST RESUMEN
-        
         validateResumen();
         resumen.add("\nFecha :"+ fecha);
         resumen.add("\nN°Pedido: "+getNumero_pedido());

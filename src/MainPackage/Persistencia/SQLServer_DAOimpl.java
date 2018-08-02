@@ -15,7 +15,7 @@ import java.sql.*;
 public class SQLServer_DAOimpl implements PedidoDAO {
 
     @Override
-    public void addPedido(Pedido pedido) {
+    public void addPedido(Pedido pedido) throws SQLException{
         try(Connection con = Singleton_ConexionSQLServer.getInstance().getConexionSQL();
            PreparedStatement stmtPedido = con.prepareStatement(QuerySelector.getINSERT_PEDIDOS());
            PreparedStatement stmtDetalle = con.prepareStatement(QuerySelector.getINSERT_DETALLE())){
@@ -33,7 +33,8 @@ public class SQLServer_DAOimpl implements PedidoDAO {
             }
             
         }catch(SQLException exception){
-            System.err.println(exception.getMessage());
+            //System.err.println(exception.getMessage());
+            throw new SQLException();
         }
     }
 
