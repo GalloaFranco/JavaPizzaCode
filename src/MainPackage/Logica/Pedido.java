@@ -138,7 +138,7 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
 *************************************************************************** 
 */    
     public Pollo_Rostizado getPollo(){ //GENERA EL ITEM POLLO
-        Pollo_Rostizado pollo = new Pollo_Rostizado(130, 100,"Unidad","Pollo de calidad, bien doradito con tomillo, mostaza y manteca derretida");
+        Pollo_Rostizado pollo = new Pollo_Rostizado(130, 100,"Unidad","Pollo de calidad, bien doradito");
         this.total += pollo.getPrice();
         counterPollo ++;
         if ((counterPollo == 2) && (counterAdicionales == 2)){
@@ -150,7 +150,7 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
 *************************************************************************** 
 */    
     public Pizza_Italiana getPizzaItaliana(){ //GENERA EL ITEM PIZZA ITALIANA
-        Pizza_Italiana pi = new Pizza_Italiana(110, 102,"Porciones", "Pizza a la italiana, casera con queso rallado, anchoas y salame.");
+        Pizza_Italiana pi = new Pizza_Italiana(110, 102,"Porciones", "Pizza a la italiana, queso rallado, anchoas y salame.");
         this.total += pi.getPrice();
         counterPizzaItaliana++;
         return pi;

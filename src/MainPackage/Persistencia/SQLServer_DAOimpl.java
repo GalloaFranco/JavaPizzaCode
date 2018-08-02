@@ -18,24 +18,21 @@ public class SQLServer_DAOimpl implements PedidoDAO {
     public void addPedido(Pedido pedido) {
         try(Connection con = Singleton_ConexionSQLServer.getInstance().getConexionSQL();
            PreparedStatement stmtPedido = con.prepareStatement(QuerySelector.getINSERT_PEDIDOS());
-           PreparedStatement stmtComida = con.prepareStatement(QuerySelector.getINSERT_COMIDAS())){
+           PreparedStatement stmtDetalle = con.prepareStatement(QuerySelector.getINSERT_DETALLE())){
             
             stmtPedido.setInt(1, pedido.getNumero_pedido());
             stmtPedido.setDate(2, new java.sql.Date(pedido.getFecha().getTime()));
             
-            stmtPedido.executeUpdate();
+            stmtPedido.executeUpdate();   
             
+            stmtDetalle.setInt(1, pedido.getNumero_pedido());
             for(Comida comida : pedido.getComidas()){
-                stmtComida.setInt(1, comida.getId());
-                stmtComida.setDouble(2, comida.getPrice());
-                stmtComida.setString(3, comida.getDescription());
-                stmtComida.setString(4, comida.getMedida());
+            stmtDetalle.setInt(2, comida.getId());
+            stmtDetalle.executeUpdate();
             }
             
-            stmtComida.executeUpdate();
-            
         }catch(SQLException exception){
-            exception.getMessage();
+            System.err.println(exception.getMessage());
         }
     }
 

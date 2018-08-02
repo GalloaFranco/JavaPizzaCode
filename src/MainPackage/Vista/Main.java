@@ -170,6 +170,7 @@ public class Main {
                  case 3 :
                      salirOp1 = true;
 /*-----------------*/dao.addPedido(r);/*--------------------------------------*/
+/*-----------------dao.addComidas(r);--------------------------------------*/
                      System.out.println("Muchas gracias por utilizar Java Pizza Code, hasta luego!!!");
                 break;
                 
