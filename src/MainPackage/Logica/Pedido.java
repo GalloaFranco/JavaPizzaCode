@@ -109,6 +109,7 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
         Lomo lomo = new Lomo(190, 104,"Unidad","Lomaso de ternera con mayonesa casera y huevo frito.");
         this.total += lomo.getPrice();
         counterLomo ++;
+        lomo.masUno(counterLomo);
         if (counterLomo == 4){
             lomo.getDescuento(this);
         }
@@ -141,6 +142,7 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
         Pollo_Rostizado pollo = new Pollo_Rostizado(130, 100,"Unidad","Pollo de calidad, bien doradito");
         this.total += pollo.getPrice();
         counterPollo ++;
+        pollo.masUno(counterPollo);
         if ((counterPollo == 2) && (counterAdicionales == 2)){
             pollo.getDescuento(this);
         }
@@ -152,7 +154,8 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
     public Pizza_Italiana getPizzaItaliana(){ //GENERA EL ITEM PIZZA ITALIANA
         Pizza_Italiana pi = new Pizza_Italiana(110, 102,"Porciones", "Pizza a la italiana, queso rallado, anchoas y salame.");
         this.total += pi.getPrice();
-        counterPizzaItaliana++;
+        counterPizzaItaliana ++;
+        pi.masUno(counterPizzaItaliana);
         return pi;
     }
 /*    
@@ -161,7 +164,8 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
     public Pizza_Rucula getPizzaRucula(){ //GENERA EL ITEM PIZZA RUCULA
         Pizza_Rucula pr = new Pizza_Rucula(135, 103, "Porciones", "Pizza con rucula, casera queso, tomate y pimiento");
         this.total += pr.getPrice();
-        counterPizzaRucula++;
+        counterPizzaRucula ++;
+        pr.masUno(counterPizzaRucula);
         return pr;
     }
 /*    
@@ -171,6 +175,7 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
         Pizza_Simple ps = new Pizza_Simple(95, 101,"Porciones","Pizza simple, casera con queso muzarella y tomate");
         this.total += ps.getPrice();
         counterPizzaSimple++;
+        ps.masUno(counterPizzaSimple);
         return ps;
     }
 /*

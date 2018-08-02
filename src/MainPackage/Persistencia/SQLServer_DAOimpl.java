@@ -28,6 +28,7 @@ public class SQLServer_DAOimpl implements PedidoDAO {
             stmtDetalle.setInt(1, pedido.getNumero_pedido());
             for(Comida comida : pedido.getComidas()){
             stmtDetalle.setInt(2, comida.getId());
+            stmtDetalle.setInt(3, comida.retornarMasUno());
             stmtDetalle.executeUpdate();
             }
             

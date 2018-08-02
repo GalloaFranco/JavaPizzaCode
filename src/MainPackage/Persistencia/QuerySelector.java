@@ -19,7 +19,7 @@ public class QuerySelector {//ESTA CLASE CONSTA DE TODAS LAS QUERYS QUE SE UTILI
     
 
     private static final String INSERT_PEDIDOS = "INSERT INTO PEDIDOS (NRO_PEDIDO,FECHA) VALUES (?,?)";
-    private static final String INSERT_DETALLE = "INSERT INTO DETALLE_PEDIDOS (NRO_PEDIDO,ID_COMIDA) VALUES (?,?)";
+    private static final String INSERT_DETALLE = "INSERT INTO DETALLE_PEDIDOS (NRO_PEDIDO,ID_COMIDA, CANTIDAD) VALUES (?,?,?)";
     
     /*
     ****************************************************************************

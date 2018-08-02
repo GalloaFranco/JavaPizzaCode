@@ -9,7 +9,7 @@ package MainPackage.Logica;
  *
  * @author Franco Gallo
  */
-public abstract class Comida {
+public abstract class Comida implements Contador {
 
 private double price;
 private int id;
