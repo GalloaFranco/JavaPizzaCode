@@ -59,23 +59,23 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
             
         if (counterLomo >= 1) {
             resumen.add("\n-Lomo $190" + " ||Cantidad pedida: " + counterLomo);
-            arrayComida.add(getLomo());
+            arrayComida.add(getLomoPersistencia());
         }
         if (counterPollo >= 1) {
             resumen.add("\n-Pollo $130" + " ||Cantidad pedida: " + counterPollo);
-            arrayComida.add(getPollo());
+            arrayComida.add(getPolloPeristencia());
         }
         if (counterPizzaItaliana >= 1) {
             resumen.add("\n-Pizza Italiana $110" + " ||Cantidad pedida: " + counterPizzaItaliana);
-            arrayComida.add(getPizzaItaliana());
+            arrayComida.add(getPizzaItalianaPersistencia());
         }
         if (counterPizzaRucula >= 1) {
             resumen.add("\n-Pizza Rucula $135" + " ||Cantidad pedida: " + counterPizzaRucula);
-            arrayComida.add(getPizzaRucula());
+            arrayComida.add(getPizzaRuculaPersistencia());
         }
         if (counterPizzaSimple >= 1) {
             resumen.add("\n-Pizza Simple $95" + " ||Cantidad pedida: " + counterPizzaSimple);
-            arrayComida.add(getPizzaSimple());
+            arrayComida.add(getPizzaSimplePersistencia());
         }
         if (counterDescuentoPollo >= 1) {
             resumen.add("\n*Descuento pollo 30% descuento= -$" + auxiliarDescuentoPollo);
@@ -108,10 +108,17 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
         Lomo lomo = new Lomo(190, 104,"Unidad","Lomaso de ternera con mayonesa casera y huevo frito.");
         this.total += lomo.getPrice();
         counterLomo ++;
-        lomo.masUno(counterLomo);
+        getLomoPersistencia();
         if (counterLomo == 4){
             lomo.getDescuento(this);
         }
+        return lomo;
+    }
+    
+    public Lomo getLomoPersistencia(){//GENERA  EL ITEM LOMO PARA PERSISTENCIA
+        Lomo lomo = new Lomo(190, 104,"Unidad","Lomaso de ternera con mayonesa casera y huevo frito.");
+        lomo.masUno(counterLomo);
+
         return lomo;
     }
 /*    
@@ -147,6 +154,13 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
         }
         return pollo;
     }
+    
+    public Pollo_Rostizado getPolloPeristencia(){ //GENERA EL ITEM POLLO
+        Pollo_Rostizado pollo = new Pollo_Rostizado(130, 100,"Unidad","Pollo de calidad, bien doradito");
+        pollo.masUno(counterPollo);
+       
+        return pollo;
+    }
 /*    
 *************************************************************************** 
 */    
@@ -155,6 +169,13 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
         this.total += pi.getPrice();
         counterPizzaItaliana ++;
         pi.masUno(counterPizzaItaliana);
+        return pi;
+    }
+    
+    public Pizza_Italiana getPizzaItalianaPersistencia(){ //GENERA EL ITEM PIZZA ITALIANA
+        Pizza_Italiana pi = new Pizza_Italiana(110, 102,"Porciones", "Pizza a la italiana, queso rallado, anchoas y salame.");
+        pi.masUno(counterPizzaItaliana);
+    
         return pi;
     }
 /*    
@@ -167,6 +188,13 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
         pr.masUno(counterPizzaRucula);
         return pr;
     }
+    
+    public Pizza_Rucula getPizzaRuculaPersistencia(){ //GENERA EL ITEM PIZZA RUCULA
+        Pizza_Rucula pr = new Pizza_Rucula(135, 103, "Porciones", "Pizza con rucula, casera queso, tomate y pimiento");
+        pr.masUno(counterPizzaRucula);
+
+        return pr;
+    }
 /*    
 *************************************************************************** 
 */       
@@ -175,6 +203,13 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
         this.total += ps.getPrice();
         counterPizzaSimple++;
         ps.masUno(counterPizzaSimple);
+        return ps;
+    }
+    
+    public Pizza_Simple getPizzaSimplePersistencia(){ //GENERA EL ITEM PIZZA SIMPLE
+        Pizza_Simple ps = new Pizza_Simple(95, 101,"Porciones","Pizza simple, casera con queso muzarella y tomate");
+        ps.masUno(counterPizzaSimple);
+
         return ps;
     }
 /*

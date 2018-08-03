@@ -10,8 +10,6 @@ import MainPackage.Persistencia.SQLServer_DAOimpl;
 import java.sql.SQLException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 /**
  *
  * @author Franco Gallo
@@ -26,7 +24,6 @@ public class Main {
        Pedido r = new Pedido(1);
        Scanner sc = new Scanner(System.in); 
 /*----*/SQLServer_DAOimpl dao = new SQLServer_DAOimpl();/*--------------------*/
-        int vueltas = 0;
        boolean salirOp1 = false;
        
         do{
@@ -177,7 +174,6 @@ public class Main {
 /*-----------------*/dao.addPedido(r);/*--------------------------------------*/
                     } catch (SQLException ex) {
                         System.err.println("Cargo un pedido con el mismo numero..reviselo");
-                        vueltas++;
                         break;
                     }
                      salirOp1 = true;
