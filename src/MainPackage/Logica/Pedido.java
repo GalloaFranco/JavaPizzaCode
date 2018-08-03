@@ -155,7 +155,7 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
         return pollo;
     }
     
-    public Pollo_Rostizado getPolloPeristencia(){ //GENERA EL ITEM POLLO
+    public Pollo_Rostizado getPolloPeristencia(){ //GENERA EL ITEM POLLO PARA PERSISTENCIA
         Pollo_Rostizado pollo = new Pollo_Rostizado(130, 100,"Unidad","Pollo de calidad, bien doradito");
         pollo.masUno(counterPollo);
        
@@ -172,7 +172,7 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
         return pi;
     }
     
-    public Pizza_Italiana getPizzaItalianaPersistencia(){ //GENERA EL ITEM PIZZA ITALIANA
+    public Pizza_Italiana getPizzaItalianaPersistencia(){ //GENERA EL ITEM PIZZA ITALIANA PARA PERSISTENCIA
         Pizza_Italiana pi = new Pizza_Italiana(110, 102,"Porciones", "Pizza a la italiana, queso rallado, anchoas y salame.");
         pi.masUno(counterPizzaItaliana);
     
@@ -189,7 +189,7 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
         return pr;
     }
     
-    public Pizza_Rucula getPizzaRuculaPersistencia(){ //GENERA EL ITEM PIZZA RUCULA
+    public Pizza_Rucula getPizzaRuculaPersistencia(){ //GENERA EL ITEM PIZZA RUCULA PARA PERSISTENCIA
         Pizza_Rucula pr = new Pizza_Rucula(135, 103, "Porciones", "Pizza con rucula, casera queso, tomate y pimiento");
         pr.masUno(counterPizzaRucula);
 
@@ -206,7 +206,7 @@ public class Pedido{//CAMPOS DE LA CLASE PEDIDO
         return ps;
     }
     
-    public Pizza_Simple getPizzaSimplePersistencia(){ //GENERA EL ITEM PIZZA SIMPLE
+    public Pizza_Simple getPizzaSimplePersistencia(){ //GENERA EL ITEM PIZZA SIMPLE PARA PERSISTENCIA
         Pizza_Simple ps = new Pizza_Simple(95, 101,"Porciones","Pizza simple, casera con queso muzarella y tomate");
         ps.masUno(counterPizzaSimple);
 

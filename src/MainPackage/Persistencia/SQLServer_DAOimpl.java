@@ -33,8 +33,8 @@ public class SQLServer_DAOimpl implements PedidoDAO {
             }
             
         }catch(SQLException exception){
-            //System.err.println(exception.getMessage());
-            throw new SQLException();
+            throw new SQLException();//Con esta exception queremos indicar que se cargo un pedido con el mismo nro_pedido
+                                     //Se deberia agregar una exception especial para esta situacion
         }
     }
 
