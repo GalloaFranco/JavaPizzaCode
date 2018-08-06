@@ -153,6 +153,10 @@ public class Main {
                                                 s.getLomo();
                                                 salirOp4 = false;
                                             break;
+                                            
+                                            default :
+                                                    
+                                                    System.err.println("Debe ingresar un numero del 0 al 5");
                                         }
                                 }catch(InputMismatchException i){
                                     System.out.println("El caracter ingresado no es válido, debe ingresar un numero");
